@@ -12,10 +12,10 @@ app.config['SECRET_KEY'] = 'secretkey'
 with app.app_context():
     connect_db(app)
     db.create_all()
-    new_user = User(first_name="Kids", last_name="Perfects", image_url="https://www.freeiconspng.com/uploads/face-head-woman-female-icon-23.png")
+    new_user = User(first_name="Suzie", last_name="Brown", image_url="https://www.freeiconspng.com/uploads/face-head-woman-female-icon-23.png")
     db.session.add(new_user)
     db.session.commit()
-    new_post = Post(title="Hello There People Siblings", content="This is my ninth post", user_id = 1)
+    new_post = Post(title="Hello There", content="This is my post", user_id = 1)
     db.session.add(new_post)
     db.session.commit()
 
